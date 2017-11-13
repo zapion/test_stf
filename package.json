@@ -1,0 +1,19 @@
+{
+  "name": "stf-invoker",
+  "version": "0.0.1",
+  "description": "Run integration tests on OpenSTF device using its REST API.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zapion/test_stf.git"
+  },
+  "keywords": [
+    "OpenSTF",
+    "Android"
+  ],
+  "author": "Paul Yang",
+  "license": "MIT",
+  "homepage": "https://github.com/zapion/test_stf",
+  "dependencies": {
+    "swagger-client": "2.1.9"
+  }
+}
