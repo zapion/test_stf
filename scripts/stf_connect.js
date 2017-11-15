@@ -47,8 +47,7 @@ client.then(function(api) {
         return api.user.remoteConnectUserDeviceBySerial({
           serial: device.serial
         }).then(function(res) {
-          console.log(res.obj.remoteConnectUrl)
-          console.log(serial)
+          console.log(res.obj.remoteConnectUrl + " " + serial)
         })
       })
     })

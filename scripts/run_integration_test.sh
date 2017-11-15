@@ -2,11 +2,11 @@
 set -e
 
 
-ret=($(node ./scripts/stf_connect.js $DEVICE_SERIAL))
-connectUrl=${ret[0]}
+ret=$(node ./scripts/stf_connect.js $DEVICE_SERIAL)
+connectUrl=`echo $ret | awk -F ' ' '{print $1}'`
 
 if [ "$DEVICE_SERIAL" == "" ]; then
-  DEVICE_SERIAL=${ret[1]}
+  DEVICE_SERIAL=`echo $ret | awk -F ' ' '{print $2}'`
 fi
 
 echo $connectUrl
