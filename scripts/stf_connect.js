@@ -18,7 +18,8 @@ client.then(function(api) {
   new Promise(function (resolve) {
     if(!serial) {
       return api.devices.getDevices().then(function(res) {
-        serial = res.obj.devices.find(x => x.using === false).serial
+        available_devices = res.obj.devices.filter(x => x.using === false)
+        serial = available_devices[~~(Math.random() * available_devices.length)].serial
         resolve()
       })
     }
